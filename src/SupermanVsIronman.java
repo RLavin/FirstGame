@@ -48,11 +48,13 @@ public class SupermanVsIronman {
 
         getAndPrintAbilityName();
 
-    }
 
 
-       if(choice.equalsIgnoreCase(KEY_JARVIS)){
-        System.out.println("Jarvis has a life points of 50");
+
+       if(choice.equalsIgnoreCase(KEY_JARVIS)) {
+           System.out.println("Jarvis has a life points of 50");
+       }
+
     }
 
     public static void getAndPrintPlayerName() {
