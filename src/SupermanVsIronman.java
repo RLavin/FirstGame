@@ -58,6 +58,7 @@ public class SupermanVsIronman {
 
         getAndPrintAbilityName();
 
+<<<<<<< HEAD
 
         if (choice.equalsIgnoreCase(KEY_SONICBLASTER)) {
             System.out.println("SonicBlaster has a life points of 100");
@@ -104,6 +105,15 @@ public class SupermanVsIronman {
         }
 
 
+=======
+
+
+
+       if(choice.equalsIgnoreCase(KEY_JARVIS)) {
+           System.out.println("Jarvis has a life points of 50");
+       }
+
+>>>>>>> 129d7f62cd02f8ada1c6e04bbf1723122235ffc3
     }
 
     public static void getAndPrintPlayerName() {
