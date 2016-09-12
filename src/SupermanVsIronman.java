@@ -16,7 +16,14 @@ public class SupermanVsIronman {
     static String KEY_SUPER_SPEED = "Super Speed";
     static String KEY_SUPER_STRENGTH = "Super Strength";
     static String KEY_FLY = "Fly";
-    static String choice = "";
+    static String Superhero = "";
+    static String Ability = "";
+    static int Ironlife = 0;
+    static int Supermanlife = 0;
+    static String Ironmanweapon = "";
+    static String Supermanweapon = "";
+
+
 
 
     public static void main(String[] args) {
@@ -31,7 +38,7 @@ public class SupermanVsIronman {
 
 
         // chooose some abilities
-        if (choice.equalsIgnoreCase(KEY_IRONMAN)) {
+        if (Superhero .equalsIgnoreCase(KEY_IRONMAN)) {
             System.out.println("Hello Ironman");
             System.out.println("You have a few abilities to battle your Opponent!");
             System.out.println("You have:");
@@ -43,7 +50,7 @@ public class SupermanVsIronman {
 
         }
 
-        if (choice.equalsIgnoreCase(KEY_SUPERMAN)) {
+        if (Superhero .equalsIgnoreCase(KEY_SUPERMAN)) {
             System.out.println("Hello Superman");
             System.out.println("You have a few abilities to battle your Opponent!");
             System.out.println("You have:");
@@ -58,77 +65,109 @@ public class SupermanVsIronman {
 
         getAndPrintAbilityName();
 
-<<<<<<< HEAD
 
-        if (choice.equalsIgnoreCase(KEY_SONICBLASTER)) {
+        if (Ability.equalsIgnoreCase(KEY_SONICBLASTER)) {
             System.out.println("SonicBlaster has a life points of 100");
+             Ironlife = 100;
+             Supermanweapon = KEY_IMMORTALITY;
         }
 
-            if (choice.equalsIgnoreCase(KEY_MISSILE_LAUNCHERS)) {
+            if (Ability.equalsIgnoreCase(KEY_MISSILE_LAUNCHERS)) {
                 System.out.println("Missile Launchers has a life points of 80");
+                Ironlife = 80;
+                Supermanweapon = KEY_X_RAY_VISION;
             }
 
-            if (choice.equalsIgnoreCase(KEY_FLAMETHROWERS)) {
+            if (Ability.equalsIgnoreCase(KEY_FLAMETHROWERS)) {
                 System.out.println("Flamethrowers has a life points of 60");
+                Ironlife = 60;
+                Supermanweapon = KEY_SUPER_SPEED;
             }
 
-            if (choice.equalsIgnoreCase(KEY_JETBOOTS)) {
+            if (Ability.equalsIgnoreCase(KEY_JETBOOTS)) {
                 System.out.println("Jetboots has a life points of 40");
+                Ironlife = 40;
+                Supermanweapon = KEY_SUPER_STRENGTH;
             }
 
-            if (choice.equalsIgnoreCase(KEY_JARVIS)) {
+            if (Ability.equalsIgnoreCase(KEY_JARVIS)) {
                 System.out.println("Jarvis has a life points of 20");
+                Ironlife = 20;
+                Supermanweapon = KEY_FLY;
             }
 
-            if (choice.equalsIgnoreCase(KEY_IMMORTALITY)) {
+            if (Ability.equalsIgnoreCase(KEY_IMMORTALITY)) {
                 System.out.println("Immortality has a life points of 100");
+                Supermanlife = 100;
+                Ironmanweapon = KEY_SONICBLASTER;
             }
 
-            if (choice.equalsIgnoreCase(KEY_X_RAY_VISION)) {
+            if (Ability.equalsIgnoreCase(KEY_X_RAY_VISION)) {
                 System.out.println("X-ray Vision has a life points of 80");
+                Supermanlife = 80;
+                Ironmanweapon = KEY_MISSILE_LAUNCHERS;
             }
 
-            if (choice.equalsIgnoreCase(KEY_SUPER_SPEED)) {
+            if (Ability.equalsIgnoreCase(KEY_SUPER_SPEED)) {
                 System.out.println("Super Speed has a life points of 60");
+                Supermanlife = 60;
+                Ironmanweapon = KEY_FLAMETHROWERS;
             }
 
-            if (choice.equalsIgnoreCase(KEY_SUPER_STRENGTH)) {
+            if (Ability.equalsIgnoreCase(KEY_SUPER_STRENGTH)) {
                 System.out.println("Super Strength has a life points of 40");
+                Supermanlife = 40;
+                Ironmanweapon = KEY_JETBOOTS;
             }
 
-            if (choice.equalsIgnoreCase(KEY_FLY)) {
+            if (Ability.equalsIgnoreCase(KEY_FLY)) {
                 System.out.println("Fly has a life points of 20");
+                Supermanlife = 20;
+                Ironmanweapon = KEY_JARVIS;
+
             }
 
-        if (choice.equalsIgnoreCase(KEY_IRONMAN)) {
-            System.out.println("Your now ready to battle your opponent Superman!");
+        if (Superhero.equalsIgnoreCase(KEY_IRONMAN)) {
+            Supermanlife  = Ironlife;
+            System.out.println();
+            System.out.println("Your player is Ironman!");
+            System.out.println("Your health is " + Ironlife);
+            System.out.println("Your ability is " + Ability);
+            System.out.println("Your opponent is Superman!");
+            System.out.println("Your opponent health is " + Supermanlife);
+            System.out.println("Your opponent ability is " + Supermanweapon);
+
+        }
+
+        if (Superhero.equalsIgnoreCase(KEY_SUPERMAN)) {
+            Ironlife = Supermanlife;
+            System.out.println();
+            System.out.println("Your player is Superman!");
+            System.out.println("Your health is " + Supermanlife);
+            System.out.println("Your ability is " + Ability);
+            System.out.println("Your opponent is Ironman!");
+            System.out.println("Your opponent health is " + Ironlife);
+            System.out.println("Your opponent ability is " + Ironmanweapon);
+
         }
 
 
-=======
 
-
-
-       if(choice.equalsIgnoreCase(KEY_JARVIS)) {
-           System.out.println("Jarvis has a life points of 50");
-       }
-
->>>>>>> 129d7f62cd02f8ada1c6e04bbf1723122235ffc3
     }
 
     public static void getAndPrintPlayerName() {
         Scanner reader = new Scanner(System.in);
         System.out.println("Enter your player name: ");
-        choice = reader.nextLine();
-        System.out.println("You've selected: " + choice);
+        Superhero  = reader.nextLine();
+        System.out.println("You've selected: " + Superhero);
     }
 
 
     public static void getAndPrintAbilityName() {
         Scanner reader = new Scanner(System.in);
         System.out.println("Enter your ability to battle: ");
-        choice = reader.nextLine();
-        System.out.println("You've selected: " + choice);
+        Ability  = reader.nextLine();
+        System.out.println("You've selected: " + Ability );
 
     }
 
